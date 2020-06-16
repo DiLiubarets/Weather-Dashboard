@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+   
+    <title>Weather Dashboard Di Liubarets</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark justify-content-md-center">
+        <h1> Weather Dashboard</h1>
+        <p id="weatherDashboard"></p>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- search the city -->
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <span id="error"></span>
+                <div id="search">
+                    <h3 id="searchForCity">Search for a City:</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" id="input-city" class="form-control" placeholder="City">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" id="btn-search" type="button">Search</button>
+                        </div>
+                    </div>
+                    <div class="list-group " id="presetCities">
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- jumbotron for current day -->
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="jumbotron jumbotron-fluid ">
+                    <div class="container-fluid" id="current-day"></div>
+                </div>
+                <!-- 5-days forecast -->
+                <section id="forecast">
+                    <div id="cardsForecast" class="row days"></div>
+
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

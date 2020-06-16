@@ -1,0 +1,48 @@
+body{
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+/* navbar */
+h1 {
+  color: white;
+  text-align: center;
+}
+#weatherDashboard{
+  color: white;
+}
+/* jumbotron current day */
+.jumbotron {
+ /* background-image: url('https://radar.weather.gov/Conus/Loop/NatLoop_Small.gif');
+  background-size: cover;
+  height: 100%; */
+  height: 80vh;
+  margin-top: 1em;
+
+ 
+}
+
+#current-day{
+    padding-left: 4em;
+   
+}
+
+/* search city */
+#search{
+    margin-top: 2em;
+}
+#searchForCity{
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+#presetCities {
+  text-align: center;
+}
+
+/* 5-days forecast */
+#cardsForecast div {
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
