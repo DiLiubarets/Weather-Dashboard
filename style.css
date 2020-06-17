@@ -11,13 +11,16 @@ h1 {
 }
 /* jumbotron current day */
 .jumbotron {
- background-image: url('https://radar.weather.gov/Conus/Loop/NatLoop_Small.gif');
+ background-image: url('https://radar.weather.gov/Conus/Loop/NatLoop.gif');
   background-size: cover;
   /* height: 100%; */
   height: 100vh;
   margin-top: 1em;
 
  
+}
+#forecast{
+  float:right;
 }
 
 #current-day{
