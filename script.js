@@ -5,9 +5,9 @@ $(document).ready(function () {
   $("#weatherDashboard").append(fullDate);
 
   // API weather network with key
-  var queryCurrent = "http://api.openweathermap.org/data/2.5/weather?q=";
-  var queryFiveday = "http://api.openweathermap.org/data/2.5/forecast?q=";
-  var UV = "http://api.openweathermap.org/data/2.5/uvi?";
+  var queryCurrent = "https://api.openweathermap.org/data/2.5/weather?q=";
+  var queryFiveday = "https://api.openweathermap.org/data/2.5/forecast?q=";
+  var UV = "https://api.openweathermap.org/data/2.5/uvi?";
   var appID = "&appid=7e882bb8ed2dcfe85cf3abf5390335b4";
   var cityList = [];
 
