@@ -4,7 +4,7 @@ $(document).ready(function () {
   var fullDate = moment().format("MMMM Do YYYY ");
   $("#weatherDashboard").append(fullDate);
 
-  // API weather network with key
+  // API weather network with key2
   var queryCurrent = "https://api.openweathermap.org/data/2.5/weather?q=";
   var queryFiveday = "https://api.openweathermap.org/data/2.5/forecast?q=";
   var UV = "https://api.openweathermap.org/data/2.5/uvi?";
@@ -22,6 +22,9 @@ $(document).ready(function () {
         showCity(city);
       }
     }
+    getCurrent("Ottawa");
+    getFiveday("Ottawa");
+
   }
 
   // Info for current day
@@ -82,11 +85,31 @@ $(document).ready(function () {
       type: "GET",
     }).then(function (data) {
       console.log(data);
+      var color = UVColor(data.value)
       var currentDay = $("#current-day");
       currentDay.append(
-        '<p class="uv">UV Index: ' + "<span>" + data.value + "</span></p>"
+        '<p class="uv">UV Index: ' + data.value + "</p>"
       );
+      $(".uv").css("color", color)
     });
+  }
+  function UVColor(UV){
+    if(UV <= 2) {
+      return "green"
+    }
+    else if(UV <= 5) {
+      return "yellow"
+    }
+    else if (UV <= 7) {
+      return "orange"
+    }
+    else if (UV <= 10) {
+      return "red"
+    }
+    else {
+      return "purple"
+    }
+
   }
 
   // 5-days forecast
